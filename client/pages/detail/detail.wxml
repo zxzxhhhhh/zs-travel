@@ -1,0 +1,57 @@
+<!--pages/details/detail.wxml-->
+
+<scroll-view class='wrap'  scroll-y scroll-with-animation enable-back-to-top>
+
+  <view class='product-card'>
+    <image class='product-image' src='{{product.image}}'></image>
+    <view class='product-name'>{{product.name}}</view>
+    <view class='product-source'>{{product.source}}</view>
+    <view class='product-meta'>
+      <view class='product-money'>￥</view>
+      <view class='product-price'>{{product.price}}</view>
+    </view>
+  </view>
+
+  <view class='product-service-card'>
+    <view class='product-service-item'>
+      <view class='product-service-symbol'>✔</view>
+      <view class='service-text'>环境整洁优雅</view>
+    </view>
+    <view class='product-service-item'>
+      <view class='product-service-symbol'>✔</view>
+      <view class='service-text'>提前一天免费取消</view>
+    </view>
+    
+    <view class='reviews-card'>
+      <view class='reviews-title' bindtap='onCommentEntry'>
+        <view class='review-title-text'>评价</view>
+        <view class='review-nums'>{{product.commentCount}}条</view>
+        <image class='review-arrow' src='/images/grey-arrow.png'></image>
+      </view>
+      <view class='review-detail' wx:if='{{product.firstComment.content}}'>{{product.firstComment.content}}</view>
+    </view>
+  </view>
+  <view class="tui-picker-content">
+    <picker mode="date" value="{{date}}" bindchange="changeDate">
+      <view class="tui-picker-detail">
+        入住日期: {{date}}
+      </view>
+    </picker>
+  </view>
+  <view class='user-info'>
+    <view class="user-name" >
+      <text class='item-name'><text class='star'  >*</text>姓名</text>
+      <input type="text" placeholder='请输入您的姓名'  bindinput='userNameInput'></input>
+      <!-- <text class='hint' wx:if='{{!isName}}'>姓名不能为空</text> -->
+    </view>
+
+    <view class="user-tel">
+      <text class='item-name'><text class='star' >*</text>联系电话</text>
+      <input type="number" placeholder='请输入联系电话' maxlength='11' bindinput='userTellInput' ></input>
+      <!-- <text class='hint' wx:if='{{!isPhone}}' style="width:35%">请输入有效的手机号</text> -->
+    </view>
+  </view>
+</scroll-view>
+
+
+<button class='btn-buy-now' bindtap='orderNow'>立即预定</button>
