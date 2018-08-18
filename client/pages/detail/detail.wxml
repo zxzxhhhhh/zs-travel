@@ -31,14 +31,25 @@
       <view class='review-detail' wx:if='{{product.firstComment.content}}'>{{product.firstComment.content}}</view>
     </view>
   </view>
-  <view class="tui-picker-content">
-    <picker mode="date" value="{{date}}" bindchange="changeDate">
-      <view class="tui-picker-detail">
-        入住日期: {{date}}
+
+
+
+  <view class='order-info'>
+    <view class="order-date" >
+      <text class='item-name'><text class='star'  >*</text>入住日期</text>
+      <picker  mode="date" value="{{date}}" bindchange="changeDate">{{date}}</picker>
+    </view>
+
+    <view class="order-amount" >
+      <text class='item-name'><text class='star'  >*</text>数量</text>
+      <view class='product-count-edit'>
+        <view class='count-minus' bindtap='onTapAdjust' data-type='minus'>-</view>
+        <view class='count-now'>{{count}}</view>
+        <view class='count-add' bindtap='onTapAdjust' data-type='add'>+</view>
       </view>
-    </picker>
-  </view>
-  <view class='user-info'>
+      <!-- <text class='hint' wx:if='{{!isName}}'>姓名不能为空</text> -->
+    </view>
+
     <view class="user-name" >
       <text class='item-name'><text class='star'  >*</text>姓名</text>
       <input type="text" placeholder='请输入您的姓名'  bindinput='userNameInput'></input>

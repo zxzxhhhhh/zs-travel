@@ -92,7 +92,7 @@
   margin-left: 20rpx;
 }
 
-.user-info{
+.order-info{
   margin: 20rpx;
   box-shadow: 0 2rpx 13rpx 5rpx rgba(0, 0, 0, 0.02);
   border-radius: 13rpx;
@@ -102,10 +102,10 @@
   line-height: 49rpx;
 }
 
-.user-name, .user-tel{
+.user-name, .user-tel, .order-date, .order-amount{
   display: flex;
 }
-.user-name{
+.user-name, .order-date, .order-amount{
   margin-bottom: 10rpx;
 }
 .item-name{
@@ -115,7 +115,27 @@
   color:red;
   padding-right:10rpx
 }
+.product-count-edit {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 
+.count-minus,
+.count-add {
+  width: 36rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  border-radius: 50%;
+  border: 3rpx solid #F6E474;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: 900;
+}
+
+.count-now {
+  margin: 0 18rpx;
+}
 .btn-buy-now{
   position: absolute;
   bottom: 0;
