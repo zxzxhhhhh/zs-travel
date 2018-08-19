@@ -20,11 +20,11 @@
       <view class='login-name'>{{userInfo.nickName}}</view>
     </view>
 
-    <view class='address'>
-      <view class='address-text'>收货地址</view>
+    <navigator class='order' url='../order/order'>
+      <view class='order-text'>我的预订</view>
       <image class='arrow' src='/images/grey-arrow.png'></image>
-    </view>
-    <view class='contact'>
+    </navigator>
+    <view class='contact' bindtap='onTapContact'>
       <view class='contact-text'>联系客服</view>
       <image class='arrow' src='/images/grey-arrow.png'></image>
     </view>

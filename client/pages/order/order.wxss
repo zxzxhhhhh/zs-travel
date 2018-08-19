@@ -34,22 +34,18 @@ Page{
   margin-right: 10rpx;
 }
 .order-name{
-  font-size: 40rpx;
-  line-height: 52rpx;
+  font-size: 35rpx;
+  line-height: 49rpx;
 }
-
-
 /* 保持订单之间的间距*/
 .order-item{
   margin: 30rpx 20rpx;
   box-shadow: 0 2rpx 13rpx 5rpx rgba(0, 0, 0, 0.02);
   background-color: white;
   border-radius: 13rpx;
-}
-.product-item{
+
   display: flex;
   border-bottom: 1px solid rgba(151, 151, 151, 0.2);
-  margin: 10rpx;
 }
 
 .product-image{
@@ -62,7 +58,7 @@ Page{
   margin-left: 20rpx;
   margin-top: 10rpx;
 }
-.product-name{
+.product-name, .product-date{
   font-size: 35rpx;
   line-height: 48rpx;
 }
@@ -79,13 +75,10 @@ Page{
   font-size: 35rpx;
   line-height: 48rpx;
   }
-.product-item:last-child{
-   border-bottom: none;
-}
+
 .product-num-review{
   flex-shrink: 0;
-  margin-left: 59rpx;
-  padding-top: 34rpx;
+  margin: 10rpx 30rpx;
   height: 100%;
   box-sizing: border-box;
   font-size: 28rpx;

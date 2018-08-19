@@ -18,13 +18,13 @@ Page{
   line-height: 56rpx;
   font-weight: bold;
 }
-.address{
+.order{
   border-top: solid 20rpx rgba(0, 0, 0, 0.02);
   padding: 30rpx ;
   display: flex;
   align-items: center;
 }
-.address-text{
+.order-text{
   font-size: 36rpx;
   line-height: 48rpx;
   flex-grow: 1;

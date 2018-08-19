@@ -10,7 +10,12 @@ Page({
     userInfo: null,
     locationAuthType: app.data.locationAuthType
   },
-
+  onTapContact(){
+    wx.showModal({
+      title: '联系电话',
+      content: '18612340000',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

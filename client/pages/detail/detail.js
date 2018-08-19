@@ -3,12 +3,15 @@ const config = require('../../config.js')
 const qcloud = require('../../vendor/wafer2-client-sdk/index.js');
 // 在需要使用的js文件中，导入js
 var util = require('../../utils/util.js');
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    userInfo: null,
+    locationAuthType: app.data.locationAuthType,
     product: {},
     date: '',
     count: 1,
@@ -16,6 +19,23 @@ Page({
     phone: "",
     isName: false,
     isPhone: false
+  },
+  onTapLogin(res) {
+    app.login({
+      success: ({ userInfo }) => {
+        this.setData({
+          userInfo,
+          locationAuthType: app.data.locationAuthType
+        })
+        console.log('app.data.locationAuthType is:' + app.data.locationAuthType)
+      },
+      error: () => {
+        console.log('login failed in trolley!')
+        this.setData({
+          locationAuthType: app.data.locationAuthType
+        })
+      }
+    })
   },
   changeDate(e) {
     this.setData({ date: e.detail.value });
@@ -155,6 +175,9 @@ Page({
           wx.showToast({
             title: '预定成功',
           })
+          setTimeout(() => {
+            wx.navigateBack()
+          }, 1500)
        } else {
           wx.showToast({
             icon: 'none',
@@ -185,5 +208,18 @@ Page({
       date: date
     });
 
+  },
+  /**
+ * 生命周期函数--监听页面显示
+ */
+  onShow: function () {
+    console.log('check session in order')
+    app.checkSessionAndGetData({
+      success: ({ userInfo }) => {
+        this.setData({
+          userInfo
+        })
+      }
+    })
   },
 })

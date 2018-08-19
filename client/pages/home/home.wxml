@@ -1,14 +1,14 @@
 <!--pages/home/home.wxml-->
 <image class='background' src='/images/bg.png'></image>
-<!-- <view class='hot-card'>
+<view class='hot-card'>
+  <image class='hot-image' src='https://product-1257314924.cos.ap-shanghai.myqcloud.com/home.jpg'></image>
   <view class='hot-name'>
     <image class='hot-name-line' src='/images/line-black.png'></image>
-    <view class='hot-name-text'>商品</view>
+    <view class='hot-name-text'>东极岛阳光旅社</view>
     <image class='hot-name-line' src='/images/line-black.png'></image>
   </view>
-  <image class='hot-info' src='/images/discount.png'></image>
-  <image class='hot-image' src='{{productList[0].image}}'></image>
-</view> -->
+
+</view>
 
   <view class='list-title'>
     <image class='list-title-line' src='/images/line-black.png'></image>

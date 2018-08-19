@@ -2,7 +2,6 @@
   "pages": [
     "pages/home/home",
     "pages/order/order",
-    "pages/trolley/trolley",
     "pages/user/user",
     "pages/detail/detail",
     "pages/add-comment/add-comment",

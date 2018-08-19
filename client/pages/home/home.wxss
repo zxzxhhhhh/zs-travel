@@ -10,13 +10,13 @@ Page{
   height: 20%;
   z-index: -1;
 }
-/* .hot-card{
+.hot-card{
   position: relative;
   height: 326rpx;
   border-color: #eaeaff;
   border-radius: 25rpx;
   border-style:  solid;
-  margin: 52rpx;
+  margin: 50rpx;
   background-color: white; 
 }
 .hot-name{
@@ -36,24 +36,17 @@ Page{
   margin-right: 15rpx;
   font-size: 30rpx;
   line-height: 42rpx;
-  opacity: 0.8
+  opacity: 0.8;
+  font-weight: bold;
 }
-.hot-info{
-  position: absolute;
-  bottom: 0;
-  left: 30rpx;
-  margin-left: 15rpx;
-  margin-right: 15rpx;
-  height: 188rpx;
-  width: 259rpx;
-}
+
 .hot-image{
   position: absolute;
-  bottom: 50rpx;
+  bottom: 10rpx;
   right: 10rpx;
- height: 188rpx;
-  width: 259rpx;
-} */
+ height: 95%;
+  width: 97%;
+}
 
 .list-title{
   display: flex;
