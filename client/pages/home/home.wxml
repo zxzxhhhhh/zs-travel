@@ -1,14 +1,21 @@
 <!--pages/home/home.wxml-->
 <image class='background' src='/images/bg.png'></image>
 <view class='hot-card'>
-  <image class='hot-image' src='https://product-1257314924.cos.ap-shanghai.myqcloud.com/home.jpg'></image>
+  <swiper class="hot-image" indicator-dots="ture"  autoplay="ture" interval="5000" duration="1000">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="hot-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
   <view class='hot-name'>
-    <image class='hot-name-line' src='/images/line-black.png'></image>
+    <image class='hot-name-line' src='/images/line-black.png' ></image>
     <view class='hot-name-text'>东极岛阳光旅社</view>
     <image class='hot-name-line' src='/images/line-black.png'></image>
   </view>
-
 </view>
+
+
 
   <view class='list-title'>
     <image class='list-title-line' src='/images/line-black.png'></image>

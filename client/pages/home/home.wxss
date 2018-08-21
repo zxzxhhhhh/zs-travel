@@ -12,40 +12,34 @@ Page{
 }
 .hot-card{
   position: relative;
-  height: 326rpx;
-  border-color: #eaeaff;
-  border-radius: 25rpx;
-  border-style:  solid;
-  margin: 50rpx;
-  background-color: white; 
+  width: 100%;
+  height: 450rpx;
 }
 .hot-name{
   position: absolute;
-  top: 35rpx;
+  top: 25rpx;
+  left: 20rpx;
   display: flex;
   align-items: center;
-  margin-left: 50rpx;
-  margin-bottom: 20rpx;
 }
 .hot-name-line{
-  width: 21rpx;
-  height: 34rpx;
+  width: 35rpx;
+  height: 40rpx;
 }
 .hot-name-text{
-  margin-left: 15rpx;
-  margin-right: 15rpx;
-  font-size: 30rpx;
-  line-height: 42rpx;
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+  font-size: 40rpx;
+  line-height: 56rpx;
   opacity: 0.8;
-  font-weight: bold;
 }
 
 .hot-image{
   position: absolute;
-  bottom: 10rpx;
-  right: 10rpx;
- height: 95%;
-  width: 97%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .list-title{
@@ -69,22 +63,24 @@ Page{
 .product-row{
   display: flex;
   justify-content: space-around; 
-  margin: 0 52rpx 28rpx;
+  margin: 0 15rpx 28rpx;
 }
 .product-card{
+  position: relative;
+  height: 340rpx;
   flex: 1;
   background: #FFFFFF;
   box-shadow: 0 2rpx 13rpx 5rpx rgba(0, 0, 0, 0.02);
-  border-radius: 13rpx;
-  border-style: solid;
-  border-color: white;
 }
 .product-card:first-child {
-  margin-right: 27rpx;
+  margin-right: 10rpx;
 }
 .product-image{
-  width: 300rpx;
-  height: 300rpx;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
 }
 .product-info{
   display: flex;

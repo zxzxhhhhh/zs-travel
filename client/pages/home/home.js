@@ -7,6 +7,13 @@ Page({
    */
   data: {
     productList: [], // 商品列表
+    imgUrls: [
+      'https://posters-1257314924.cos.ap-shanghai.myqcloud.com/beach.jpg',
+      'https://posters-1257314924.cos.ap-shanghai.myqcloud.com/sea.jpg',
+      'https://posters-1257314924.cos.ap-shanghai.myqcloud.com/sky.jpg',
+      'https://posters-1257314924.cos.ap-shanghai.myqcloud.com/noodle.jpg',
+      'https://posters-1257314924.cos.ap-shanghai.myqcloud.com/stone.jpg'
+    ],
   },
   getProductList(){
     wx.showLoading({
